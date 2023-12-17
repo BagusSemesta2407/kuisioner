@@ -22,10 +22,24 @@
                     <span class="menu-title">Data Kuesioner</span>
                 </a>
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="{{ route("jawaban.kategori",['periode'=>'semua']) }}">
                     <i class="icon-columns menu-icon"></i>
                     <span class="menu-title">Laporan Kuesioner</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('jurusan.index') }}">
+                    <i class="icon-layout menu-icon"></i>
+                    <span class="menu-title">Data Jurusan</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('program-studi.index') }}">
+                    <i class="icon-layout menu-icon"></i>
+                    <span class="menu-title">Data Program Studi</span>
                 </a>
             </li>
         @endif

@@ -7,6 +7,9 @@ use App\Http\Controllers\Admin\JawabanController;
 use App\Http\Controllers\Admin\KuesionerController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\ProgramStudiController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,4 +49,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/import', 'App\Http\Controllers\ImportController@import')->name('import');
     Route::post('/export-jawaban', [ExportController::class,'jawaban'])->name('export.jawaban');
+
+    // /master data jurusan
+    Route::resource('jurusan', JurusanController::class);
+    //masterdata Programstudi
+    Route::resource('program-studi', ProgramStudiController::class);
 });

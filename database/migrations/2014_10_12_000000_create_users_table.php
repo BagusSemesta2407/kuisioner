@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->enum('role', ['admin', 'jurusan', 'mahasiswa', 'p4mp'])->default('mahasiswa');
-            $table->string('periode')->nullable();
+            $table->string('tahun_masuk')->nullable();
             $table->string('tingkat')->nullable();
             $table->string('jurusan')->nullable();
             $table->string('prodi')->nullable();
