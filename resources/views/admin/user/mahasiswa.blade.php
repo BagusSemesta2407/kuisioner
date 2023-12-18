@@ -198,7 +198,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Periode</th>
+                        <th>Tahun Masuk</th>
                         <th>Jurusan</th>
                         <th>Prodi</th>
                         <th>Aksi</th>
