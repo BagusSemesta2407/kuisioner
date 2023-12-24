@@ -6,8 +6,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\JawabanController;
 use App\Http\Controllers\Admin\KuesionerController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\AdminJurusanControlller;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProgramStudiController;
 
 /*
@@ -54,4 +56,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('jurusan', JurusanController::class);
     //masterdata Programstudi
     Route::resource('program-studi', ProgramStudiController::class);
+    //master admin jurusan
+    Route::resource('admin-jurusan', AdminJurusanControlller::class);
+    Route::put('pw-reset/{id}', [AdminJurusanControlller::class, 'pwReset'])->name('pw-reset');
+    //master data mahasiswa
+    Route::resource('mahasiswa', MahasiswaController::class);
 });

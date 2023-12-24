@@ -42,6 +42,37 @@
                     <span class="menu-title">Data Program Studi</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a
+                    class="nav-link"
+                    data-toggle="collapse"
+                    href="#users"
+                    aria-expanded="false"
+                    aria-controls="users"
+                >
+                    <i class="icon-head menu-icon"></i>
+                    <span class="menu-title">Kelola Users</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="users">
+                    <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="{{ route('mahasiswa.index',['jurusan'=>'semua','tingkat'=>'semua','periode'=>'semua']) }}"
+                                    >Mahasiswa</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="{{ route('admin-jurusan.index',['jurusan'=>'semua']) }}"
+                                    >Jurusan</a
+                                >
+                            </li>
+                    </ul>
+                </div>
+            </li>
         @endif
 
         {{-- SIDEBAR ADMIN --}}
@@ -80,7 +111,7 @@
         @endif
 
         {{-- SIDEBAR P4MP --}}
-        @if (Auth::user()->role == 'p4mp')
+        {{-- @if (Auth::user()->role == 'p4mp')
             <li class="nav-item">
                 <a
                     class="nav-link"
@@ -112,7 +143,7 @@
                     </ul>
                 </div>
             </li>
-        @endif
+        @endif --}}
 
         {{-- SIDEBAR JURUSAN --}}
         @if (Auth::user()->role == 'jurusan')

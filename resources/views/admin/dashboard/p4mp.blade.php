@@ -34,7 +34,7 @@
             <div style="min-height: 150px" class="card card-dark-blue">
                 <div class="card-body">
                     <p class="mb-4 h3 ">Jurusan Teknologi Informasi dan Komputer</p>
-                    <p class="h5" > {{ $mi }} Mahasiswa Telah Mengisi Kuesioner </p>
+                    {{-- <p class="h5" > {{ $mi }} Mahasiswa Telah Mengisi Kuesioner </p> --}}
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
             <div style="min-height: 150px" class="card card-dark-blue">
                 <div class="card-body">
                     <p class="mb-4 h3 ">Jurusan Pertanian</p>
-                    <p class="h5" > {{ $a }} Mahasiswa Telah Mengisi Kuesioner </p>
+                    {{-- <p class="h5" > {{ $a }} Mahasiswa Telah Mengisi Kuesioner </p> --}}
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div style="min-height: 150px" class="card card-dark-blue">
                 <div class="card-body">
                     <p class="mb-4 h3 ">Jurusan Kesehatan</p>
-                    <p class="h5" > {{ $k }} Mahasiswa Telah Mengisi Kuesioner </p>
+                    {{-- <p class="h5" > {{ $k }} Mahasiswa Telah Mengisi Kuesioner </p> --}}
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
             <div style="min-height: 150px" class="card card-dark-blue">
                 <div class="card-body">
                     <p class="mb-4 h3 ">Jurusan Teknik Perawatan dan Perbaikan Mesin</p>
-                    <p class="h5" > {{ $tppm }} Mahasiswa Telah Mengisi Kuesioner </p>
+                    {{-- <p class="h5" > {{ $tppm }} Mahasiswa Telah Mengisi Kuesioner </p> --}}
                 </div>
             </div>
         </div>

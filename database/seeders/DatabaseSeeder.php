@@ -23,28 +23,28 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin Jurusan Teknologi Informasi dan Komputer',
             'username' => 'ajmi',
             'role' => 'jurusan',
-            'jurusan' => 'mi',
+            // 'jurusan' => 'mi',
             'password' => bcrypt('ajmi'),
         ]);
         User::create([
             'name' => 'Admin Jurusan Pertanian',
             'username' => 'aja',
             'role' => 'jurusan',
-            'jurusan' => 'a',
+            // 'jurusan' => 'a',
             'password' => bcrypt('aja'),
         ]);
         User::create([
             'name' => 'Admin Jurusan Kesehatan',
             'username' => 'ajk',
             'role' => 'jurusan',
-            'jurusan' => 'k',
+            // 'jurusan' => 'k',
             'password' => bcrypt('ajk'),
         ]);
         User::create([
             'name' => 'Admin Jurusan TPPM',
             'username' => 'ajtppm',
             'role' => 'jurusan',
-            'jurusan' => 'tppm',
+            // 'jurusan' => 'tppm',
             'password' => bcrypt('ajtppm'),
         ]);
         User::create([

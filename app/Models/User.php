@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -12,21 +13,28 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    // /**
+    //  * The attributes that are mass assignable.
+    //  *
+    //  * @var array<int, string>
+    //  */
+    // protected $fillable = [
+    //     'name',
+    //     'username',
+    //     'role',
+    //     'periode',
+    //     'tingkat',
+    //     'jurusan_id',
+    //     'prodi',
+    //     'password',
+    // ];
+
     /**
-     * The attributes that are mass assignable.
+     * The attributes that aren't mass assignable.
      *
-     * @var array<int, string>
+     * @var array
      */
-    protected $fillable = [
-        'name',
-        'username',
-        'role',
-        'periode',
-        'tingkat',
-        'jurusan',
-        'prodi',
-        'password',
-    ];
+    protected $guarded = ['id'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -47,4 +55,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Get the jurusan that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function jurusan(): BelongsTo
+    {
+        return $this->belongsTo(Jurusan::class);
+    }
+
+    /**
+     * Get the programStudi that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function programStudi(): BelongsTo
+    {
+        return $this->belongsTo(ProgramStudi::class);
+    }
 }

@@ -26,4 +26,14 @@ class Jurusan extends Model
     {
         return $this->hasMany(ProgramStudi::class);
     }
+
+    /**
+     * Get all of the user for the Jurusan
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function user(): HasMany
+    {
+        return $this->hasMany(User::class);
+    }
 }

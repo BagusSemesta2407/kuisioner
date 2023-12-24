@@ -192,46 +192,46 @@ class UserController extends Controller
         }else{
             $data['periode'] = $periode;
         }
-        $data['mi'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
-                        ->where('users.jurusan', 'Jurusan Teknologi Informasi dan Komputer')
-                        ->when($tingkat != 'semua', function ($query) use ($data) {
-                            return $query->where('tingkat', $data['tingkat']);
-                        })
-                        ->when($periode != 'semua', function ($query) use ($data) {
-                            return $query->where('periode', $data['periode']);
-                        })
-                        ->distinct('users.id')
-                        ->count('users.id');
-        $data['a'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
-                        ->where('users.jurusan', 'Jurusan Pertanian')
-                        ->when($tingkat != 'semua', function ($query) use ($data) {
-                            return $query->where('tingkat', $data['tingkat']);
-                        })
-                        ->when($periode != 'semua', function ($query) use ($data) {
-                            return $query->where('periode', $data['periode']);
-                        })
-                        ->distinct('users.id')
-                        ->count('users.id');
-        $data['k'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
-                        ->where('users.jurusan', 'Jurusan Kesehatan')
-                        ->when($tingkat != 'semua', function ($query) use ($data) {
-                            return $query->where('tingkat', $data['tingkat']);
-                        })
-                        ->when($periode != 'semua', function ($query) use ($data) {
-                            return $query->where('periode', $data['periode']);
-                        })
-                        ->distinct('users.id')
-                        ->count('users.id');
-        $data['tppm'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
-                        ->where('users.jurusan', 'Jurusan Teknik Perawatan dan Perbaikan Mesin')
-                        ->when($tingkat != 'semua', function ($query) use ($data) {
-                            return $query->where('tingkat', $data['tingkat']);
-                        })
-                        ->when($periode != 'semua', function ($query) use ($data) {
-                            return $query->where('periode', $data['periode']);
-                        })
-                        ->distinct('users.id')
-                        ->count('users.id');
+        // $data['mi'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
+        //                 ->where('users.jurusan', 'Jurusan Teknologi Informasi dan Komputer')
+        //                 ->when($tingkat != 'semua', function ($query) use ($data) {
+        //                     return $query->where('tingkat', $data['tingkat']);
+        //                 })
+        //                 ->when($periode != 'semua', function ($query) use ($data) {
+        //                     return $query->where('periode', $data['periode']);
+        //                 })
+        //                 ->distinct('users.id')
+        //                 ->count('users.id');
+        // $data['a'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
+        //                 ->where('users.jurusan', 'Jurusan Pertanian')
+        //                 ->when($tingkat != 'semua', function ($query) use ($data) {
+        //                     return $query->where('tingkat', $data['tingkat']);
+        //                 })
+        //                 ->when($periode != 'semua', function ($query) use ($data) {
+        //                     return $query->where('periode', $data['periode']);
+        //                 })
+        //                 ->distinct('users.id')
+        //                 ->count('users.id');
+        // $data['k'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
+        //                 ->where('users.jurusan', 'Jurusan Kesehatan')
+        //                 ->when($tingkat != 'semua', function ($query) use ($data) {
+        //                     return $query->where('tingkat', $data['tingkat']);
+        //                 })
+        //                 ->when($periode != 'semua', function ($query) use ($data) {
+        //                     return $query->where('periode', $data['periode']);
+        //                 })
+        //                 ->distinct('users.id')
+        //                 ->count('users.id');
+        // $data['tppm'] = Jawaban::join('users', 'users.id', '=', 'jawaban.id_user')
+                        // ->where('users.jurusan', 'Jurusan Teknik Perawatan dan Perbaikan Mesin')
+                        // ->when($tingkat != 'semua', function ($query) use ($data) {
+                        //     return $query->where('tingkat', $data['tingkat']);
+                        // })
+                        // ->when($periode != 'semua', function ($query) use ($data) {
+                        //     return $query->where('periode', $data['periode']);
+                        // })
+                        // ->distinct('users.id')
+                        // ->count('users.id');
 
         $kategoris = [
             ['Tata Pamong','TataPamong'],
@@ -414,7 +414,6 @@ class UserController extends Controller
         }else{
             $data['periode'] = $periode;
         }
-        // dd($data['periode']);
         $data['users'] = User::where('role', 'mahasiswa')
                             ->when($jurusan != 'semua', function ($query) use ($data) {
                                 return $query->where('jurusan', $data['jurusan']);
