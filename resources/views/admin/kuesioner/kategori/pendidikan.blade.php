@@ -39,7 +39,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_2" value="KB">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_4" value="B">
@@ -54,7 +54,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_2" value="KM">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_4" value="M">
@@ -82,7 +82,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_2" value="KB">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_4" value="B">
@@ -97,7 +97,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_2" value="KM">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_4" value="M">
@@ -125,7 +125,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_2" value="KB">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_4" value="B">
@@ -140,7 +140,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_2" value="KM">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_4" value="M">
@@ -168,7 +168,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_2" value="KB">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_4" value="B">
@@ -183,7 +183,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_2" value="KM">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_4" value="M">
@@ -211,7 +211,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_2" value="KB">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_3" value="CB">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_P_{{ $item->id }}" id="radio_P_{{ $item->id }}_4" value="B">
@@ -226,7 +226,7 @@
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_2" value="KM">
                             </td>
                             <td>
-                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM" checked>
+                                <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_3" value="CM">
                             </td>
                             <td>
                                 <input class="form-check-input position-static ml-1" type="radio" name="pd_radio_H_{{ $item->id }}" id="radio_H_{{ $item->id }}_4" value="M">
