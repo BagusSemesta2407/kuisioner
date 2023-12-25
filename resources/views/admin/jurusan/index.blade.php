@@ -4,7 +4,7 @@
     Master Jurusan
 @endsection
 
-@section('additional')
+{{-- @section('additional')
     <style>
         td.line3>* {
             max-width: 600px;
@@ -20,7 +20,7 @@
             width: 100% !important;
         }
     </style>
-@endsection
+@endsection --}}
 
 @section('content')
     @if (session('success'))

@@ -179,7 +179,6 @@ class JawabanController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        // dd($data);
         if (isset($data['tataPamong'])) {
             $pertanyaan = [];
             $jawaban_P = [];
