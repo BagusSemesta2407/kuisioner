@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -74,5 +75,15 @@ class User extends Authenticatable
     public function programStudi(): BelongsTo
     {
         return $this->belongsTo(ProgramStudi::class);
+    }
+
+    /**
+     * Get all of the jawaban for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function jawaban(): HasMany
+    {
+        return $this->hasMany(Jawaban::class, 'id_user', 'id');
     }
 }

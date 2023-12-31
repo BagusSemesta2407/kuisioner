@@ -9,15 +9,13 @@ class ImportController extends Controller
 {
     public function import(Request $request)
     {
+        // dd($request->all());
         $file = $request->file('file');
 
-        // dd($file);
-        // Validasi file
         $this->validate($request, [
             'file' => 'required|mimes:csv,xls,xlsx'
         ]);
-        // Import data dari file Excel
-        Excel::import(new UsersImport, $file);
+        Excel::import(new UsersImport($request->jurusan_id, $request->program_studi_id), $file);
 
         return redirect()->back()->with('success', 'Data berhasil diimport');
     }

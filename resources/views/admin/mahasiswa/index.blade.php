@@ -154,6 +154,28 @@
                                             <a href="{{ asset('kuesioner.xlsx') }}" download>Unduh Contoh File (.csv)</a>
                                         </div>
                                         <div class="mb-3 col-12">
+                                            <label for="jurusan_id" class="form-label">Jurusan</label>
+                                            <select class="form-select" name="jurusan_id" id="jurusan_id" required>
+                                                <option value="" selected disabled>Pilih Jurusan</option>
+                                                @foreach ($jurusan as $jr)
+                                                    <option value="{{ $jr->id }}"
+                                                        {{ old('jurusan_id') == $jr->id ? 'selected' : '' }}>
+                                                        {{ $jr->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="mb-3 col-12">
+                                            <label for="program_studi_id" class="form-label">Program Studi</label>
+                                            <select class="form-select" name="program_studi_id" id="program_studi_id" required>
+                                                <option value="" selected disabled>Pilih Program Studi</option>
+                                                @foreach ($programStudi as $ps)
+                                                    <option value="{{ $ps->id }}"
+                                                        {{ old('program_studi_id') == $ps->id ? 'selected' : '' }}>
+                                                        {{ $ps->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="mb-3 col-12">
                                             <span class="text-success">File harus berekstensi .csv, .xls atau .xlsx</span>
                                             <input type="file" name="file" class="form-control" id="file"
                                                 required>

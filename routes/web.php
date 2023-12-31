@@ -38,7 +38,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/kuesioner/jawab', [JawabanController::class,'store'])->name('kuesioner.jawab');
     Route::resource('/kuesioner', KuesionerController::class);
 
-    Route::get('/jawaban-{periode}', [JawabanController::class,'kategori'])->name('jawaban.kategori');
+    Route::get('/jawaban-{periode}', [JawabanController::class,'kafsetegori'])->name('jawaban.kategori');
     Route::get('/jawaban/detail-{id}', [JawabanController::class,'detail'])->name('jawaban.detail');
     Route::get('/jawaban/rekap-{kategori}', [JawabanController::class,'rekap'])->name('jawaban.rekap');
     Route::resource('/jawaban', JawabanController::class);

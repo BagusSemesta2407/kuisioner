@@ -23,4 +23,8 @@ class Jawaban extends Model
         return $this->belongsTo(User::class, 'id_user', 'id');
     }
 
+    public function scopeFilter($query, object $filter)
+    {
+        $query->when($filter->user->jurusan_id ?? false, fn($q, $jurusanId) => $q->where('jurusan_id', $jurusanId));
+    }
 }

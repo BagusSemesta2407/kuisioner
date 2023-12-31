@@ -6,11 +6,11 @@
 
 @section('addtional')
     <style>
-        .border-right{}
+        .border-right {}
     </style>
 @endsection
 
-@section("content")
+@section('content')
     @if (session('success'))
         <div class="border-0 alert alert-success bg-success alert-dismissible fade show">
             <div class="text-white"><i class='bx bxs-check-circle'></i> {{ session('success') }}</div>
@@ -18,17 +18,40 @@
         </div>
     @endif
     <!-- For each Error -->
-    @if (isset($TataPamong) && isset($Kemahasiswaan) && isset($SaranaPrasana) && isset($Keuangan) && isset($Pendidikan) && isset($Penelitian))
+    @if (isset($TataPamong) &&
+            isset($Kemahasiswaan) &&
+            isset($SaranaPrasana) &&
+            isset($Keuangan) &&
+            isset($Pendidikan) &&
+            isset($Penelitian))
         <div class="card">
             <div class="card-body">
                 <h1>Data Laporan</h1>
                 <div class="mb-3 d-flex">
-                    <a href="{{ route('jawaban.rekap',['kategori'=>'semua']) }}" class="btn btn-primary mx-1">Rekap</a>
+                    <a href="{{ route('jawaban.rekap', ['kategori' => 'semua']) }}" class="btn btn-primary mx-1">Rekap</a>
                     <form action="{{ route('export.jawaban') }}" method="POST">
                         @csrf
                         <input type="hidden" name="kategori" value="semua">
                         <button type="submit" class="btn btn-info mx-1">Cetak</button>
                     </form>
+
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-5">
+                        <form action="#">
+                            <select class="form-select" name="jurusan_id" id="jurusan_filter" required>
+                                <option value="" selected disabled>Pilih Jurusan</option>
+                                @foreach ($jurusan as $jr)
+                                    <option value="{{ $jr->id }}"
+                                        {{ request()->jurusan_id ? (request()->jurusan_id == $jr->id ? 'selected' : '') : '' }}>
+                                        {{ $jr->name }}</option>
+                                @endforeach
+                            </select>
+                            <div class="col-md-2 col-sm-12 d-flex mt-auto">
+                                <button type="submit" class="btn btn-success mx-1">Filter</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <table id="user" class="table table-striped table-light">
                     <thead class="table-dark">
@@ -99,7 +122,7 @@
     @endif
 @endsection
 
-@section("script")
+@section('script')
     <script>
         function redirectToSelectedRoute() {
             var selectElement = document.getElementById("periode");
@@ -107,14 +130,28 @@
             window.location.href = selectedValue;
         }
 
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#user').DataTable({
-                columnDefs: [
-                    { width: '10%', targets: 0 },
-                    { width: '25%', targets: 1 },
-                    { width: '20%', targets: 2 },
-                    { width: '25%', targets: 3 },
-                    { width: '30%', targets: 4 },
+                columnDefs: [{
+                        width: '10%',
+                        targets: 0
+                    },
+                    {
+                        width: '25%',
+                        targets: 1
+                    },
+                    {
+                        width: '20%',
+                        targets: 2
+                    },
+                    {
+                        width: '25%',
+                        targets: 3
+                    },
+                    {
+                        width: '30%',
+                        targets: 4
+                    },
                 ],
             });
         });

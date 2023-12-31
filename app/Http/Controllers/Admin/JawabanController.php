@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Jawaban;
+use App\Models\Jurusan;
 use App\Models\Kuesioner;
 use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
@@ -21,18 +22,25 @@ class JawabanController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function kategori($periode)
+    public function kategori(Request $request, $periode)
     {
+        $filter=(object)[
+            'jurusan_id' => $request
+        ];
         if ($periode != 'semua') {
-            $data['jawabans'] = Jawaban::whereYear('created_at', $periode)
+            $data['jawabans'] = Jawaban::filter($filter)
+            ->whereYear('created_at', $periode)
                 ->get();
         } else {
             $data['jawabans'] = Jawaban::all();
         }
 
-        $data['periodes'] = Jawaban::selectRaw('YEAR(created_at) as year')
+        $data['periodes'] = Jawaban::filter($filter)
+        ->selectRaw('YEAR(created_at) as year')
             ->groupBy('year')
             ->get();
+        $jurusan=Jurusan::whereHas('user.jawaban')->get();
+
         $kategoris = [
             ['Tata Pamong','TataPamong'], 
             ['Kemahasiswaan','Kemahasiswaan'], 
@@ -170,7 +178,9 @@ class JawabanController extends Controller
                 $data[$kategori[1]][$periode->year]['konversi_totalGap'] = $this->konversi_gap($data[$kategori[1]][$periode->year]['totalGap']);
             }
         }
-        return view('admin.jawaban.index', $data);
+        return view('admin.jawaban.index', $data, [
+            'jurusan' => $jurusan
+        ]);
     }
 
     /**
